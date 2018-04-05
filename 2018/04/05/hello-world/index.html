@@ -5,3 +5,665 @@
   
 
 
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+<meta name="theme-color" content="#222">
+
+
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.1.4" rel="stylesheet" type="text/css" />
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=5.1.4">
+
+
+  <link rel="mask-icon" href="/images/logo.svg?v=5.1.4" color="#222">
+
+
+
+
+
+  <meta name="keywords" content="Hexo, NexT" />
+
+
+
+
+
+  <link rel="alternate" href="/atom.xml" title="故地重游另一番景啊" type="application/atom+xml" />
+
+
+
+
+
+
+<meta name="description" content="哈哈 欢迎来到我的新站,想把CSDN的博客全部移过来的 但能力有限还没找到实用的解决方法这是原来CSDN的地址为了不显得空荡，我还是找几篇文章，显示个列表出来MVP大法好Mvp+Rxandroid+Retrofit的简单实现12MVP+Rxandroid+Reterofit能将替代传统的Handler+接口回调+网络请求的方式,简化代码，提高代码的可复用性，虽然我没能够将其运用到真实项目中,但是我">
+<meta property="og:type" content="article">
+<meta property="og:title" content="The Second one is the second Blog">
+<meta property="og:url" content="http://blog.csdn.net/qq_16573123/2018/04/05/hello-world/index.html">
+<meta property="og:site_name" content="故地重游另一番景啊">
+<meta property="og:description" content="哈哈 欢迎来到我的新站,想把CSDN的博客全部移过来的 但能力有限还没找到实用的解决方法这是原来CSDN的地址为了不显得空荡，我还是找几篇文章，显示个列表出来MVP大法好Mvp+Rxandroid+Retrofit的简单实现12MVP+Rxandroid+Reterofit能将替代传统的Handler+接口回调+网络请求的方式,简化代码，提高代码的可复用性，虽然我没能够将其运用到真实项目中,但是我">
+<meta property="og:updated_time" content="2018-04-05T06:15:27.272Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="The Second one is the second Blog">
+<meta name="twitter:description" content="哈哈 欢迎来到我的新站,想把CSDN的博客全部移过来的 但能力有限还没找到实用的解决方法这是原来CSDN的地址为了不显得空荡，我还是找几篇文章，显示个列表出来MVP大法好Mvp+Rxandroid+Retrofit的简单实现12MVP+Rxandroid+Reterofit能将替代传统的Handler+接口回调+网络请求的方式,简化代码，提高代码的可复用性，虽然我没能够将其运用到真实项目中,但是我">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Muse',
+    version: '5.1.4',
+    sidebar: {"position":"left","display":"post","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false},
+    fancybox: true,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    duoshuo: {
+      userId: '0',
+      author: 'Author'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="http://blog.csdn.net/qq_16573123/2018/04/05/hello-world/"/>
+
+
+
+
+
+  <title>The Second one is the second Blog | 故地重游另一番景啊</title>
+  
+
+
+
+
+
+
+
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/"  class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">故地重游另一番景啊</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle"></p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            Startseite
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            Archiv
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://blog.csdn.net/qq_16573123/2018/04/05/hello-world/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="javac">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="故地重游另一番景啊">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">The Second one is the second Blog</h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Veröffentlicht am</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-04-05T14:15:27+08:00">
+                2018-04-05
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <h3 id="哈哈-欢迎来到我的新站-想把CSDN的博客全部移过来的-但能力有限还没找到实用的解决方法"><a href="#哈哈-欢迎来到我的新站-想把CSDN的博客全部移过来的-但能力有限还没找到实用的解决方法" class="headerlink" title="哈哈 欢迎来到我的新站,想把CSDN的博客全部移过来的 但能力有限还没找到实用的解决方法"></a>哈哈 欢迎来到我的新站,想把CSDN的博客全部移过来的 但能力有限还没找到实用的解决方法</h3><h3 id="这是原来CSDN的地址"><a href="#这是原来CSDN的地址" class="headerlink" title="这是原来CSDN的地址"></a><a href="http://blog.csdn.net/qq_16573123">这是原来CSDN的地址</a></h3><h3 id="为了不显得空荡，我还是找几篇文章，显示个列表出来"><a href="#为了不显得空荡，我还是找几篇文章，显示个列表出来" class="headerlink" title="为了不显得空荡，我还是找几篇文章，显示个列表出来"></a>为了不显得空荡，我还是找几篇文章，显示个列表出来</h3><h3 id="MVP大法好"><a href="#MVP大法好" class="headerlink" title="MVP大法好"></a>MVP大法好</h3><h3 id="Mvp-Rxandroid-Retrofit的简单实现"><a href="#Mvp-Rxandroid-Retrofit的简单实现" class="headerlink" title="Mvp+Rxandroid+Retrofit的简单实现"></a>Mvp+Rxandroid+Retrofit的简单实现</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">MVP+Rxandroid+Reterofit能将替代传统的Handler+接口回调+网络请求的方式,简化代码，提高代码的可复用性，</span><br><span class="line">虽然我没能够将其运用到真实项目中,但是我的毕业设计可是把玩了个遍</span><br></pre></td></tr></table></figure>
+<p>这是CSDN博客地址: <a href="http://blog.csdn.net/qq_16573123/article/details/52663169">点点</a></p>
+<h3 id="React-for-Android"><a href="#React-for-Android" class="headerlink" title="React for Android"></a>React for Android</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">Windows 下搭建 React Native <span class="keyword">for</span> Android 环境 这个纯粹是拿来玩的,但移动端确实是在走下坡路,技不压身,</span><br><span class="line">多学点总比没听过要好</span><br></pre></td></tr></table></figure>
+<p>来来瞅瞅: <a href="http://blog.csdn.net/qq_16573123/article/details/52433990">点点就知道</a></p>
+<h3 id="事件分发"><a href="#事件分发" class="headerlink" title="事件分发"></a>事件分发</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">Android中的事件分发,其实自定义View一直是我的软肋，而事件分发却是自定义view的基础,这篇文章当时</span><br><span class="line">写的时候是弄明白了的，但是现在好像又忘了...当时是用为知笔记写的截图不见了。。。。</span><br></pre></td></tr></table></figure>
+<p>博客地址: <a href="http://blog.csdn.net/qq_16573123/article/details/70214567">坑了个爹</a></p>
+<h3 id="Handler-原理浅析"><a href="#Handler-原理浅析" class="headerlink" title="Handler 原理浅析"></a>Handler 原理浅析</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">Handler的基本原理浅谈，handler 是用于线程间通信的一种机制主要用于子线程耗时操作,主线程更新UI,</span><br><span class="line">他们见的切换,是google官方设计好的一套API,从java层面简单的分析了下原理,几个组成部分,</span><br><span class="line">几个组成部分之间的调用关系,循环的原理,handler容易绕的地方，就是看似是只有一个变量，</span><br><span class="line">但他却完成了两个线程的通信</span><br><span class="line">最近一直在研究binder驱动原理,越看越有趣,好像懂了，但是要移植一下又懵逼了,要想彻底弄懂binder驱动，</span><br><span class="line">涉及的知识会多一些，看似每天不着调的学习，其实我在为binder打基础呢？哈哈</span><br></pre></td></tr></table></figure>
+<p>先看看handler,binder我是一定会搞明白的 哈哈哈: <a href="http://blog.csdn.net/qq_16573123/article/details/51769903">enjoy life</a></p>
+
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2018/04/05/linux下的简单命令/" rel="prev" title="linux 下的简单命令和git版本管理控制工具的使用">
+                linux 下的简单命令和git版本管理控制工具的使用 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+
+  
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            Inhaltsverzeichnis
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            Übersicht
+          </li>
+        </ul>
+      
+
+      <section class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+              <p class="site-author-name" itemprop="name">javac</p>
+              <p class="site-description motion-element" itemprop="description"></p>
+          </div>
+
+          <nav class="site-state motion-element">
+
+            
+              <div class="site-state-item site-state-posts">
+              
+                <a href="/archives/">
+              
+                  <span class="site-state-item-count">2</span>
+                  <span class="site-state-item-name">Artikel</span>
+                </a>
+              </div>
+            
+
+            
+
+            
+
+          </nav>
+
+          
+            <div class="feed-link motion-element">
+              <a href="/atom.xml" rel="alternate">
+                <i class="fa fa-rss"></i>
+                RSS
+              </a>
+            </div>
+          
+
+          
+
+          
+          
+
+          
+          
+
+          
+
+        </div>
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#哈哈-欢迎来到我的新站-想把CSDN的博客全部移过来的-但能力有限还没找到实用的解决方法"><span class="nav-number">1.</span> <span class="nav-text">哈哈 欢迎来到我的新站,想把CSDN的博客全部移过来的 但能力有限还没找到实用的解决方法</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#这是原来CSDN的地址"><span class="nav-number">2.</span> <span class="nav-text">这是原来CSDN的地址</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#为了不显得空荡，我还是找几篇文章，显示个列表出来"><span class="nav-number">3.</span> <span class="nav-text">为了不显得空荡，我还是找几篇文章，显示个列表出来</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#MVP大法好"><span class="nav-number">4.</span> <span class="nav-text">MVP大法好</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Mvp-Rxandroid-Retrofit的简单实现"><span class="nav-number">5.</span> <span class="nav-text">Mvp+Rxandroid+Retrofit的简单实现</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#React-for-Android"><span class="nav-number">6.</span> <span class="nav-text">React for Android</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#事件分发"><span class="nav-number">7.</span> <span class="nav-text">事件分发</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Handler-原理浅析"><span class="nav-number">8.</span> <span class="nav-text">Handler 原理浅析</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; <span itemprop="copyrightYear">2018</span>
+  <span class="with-love">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">javac</span>
+
+  
+</div>
+
+
+  <div class="powered-by">Erstellt mit  <a class="theme-link" target="_blank" href="https://hexo.io">Hexo</a></div>
+
+
+
+  <span class="post-meta-divider">|</span>
+
+
+
+  <div class="theme-info">Theme &mdash; <a class="theme-link" target="_blank" href="https://github.com/iissnan/hexo-theme-next">NexT.Muse</a> v5.1.4</div>
+
+
+
+
+        
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+  
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.4"></script>
+
+
+
+  
+  
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+  
+
+  
+
+  
+
+  
+
+</body>
+</html>
